@@ -1,0 +1,22 @@
+:root {
+  --click-button-bg: white;
+  --click-button-text: black;
+  --bg-color: white;
+}
+
+[data-theme="dark"] {
+  --click-button-bg: purple;
+  --click-button-text: white;
+  --bg-color: black;
+}
+
+.clickbtn {
+  background-color: var(--click-button-bg);
+  color: var(--click-button-text);
+}
+
+.themeBody {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+}
