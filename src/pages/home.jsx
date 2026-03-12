@@ -5,6 +5,7 @@ export default function Home() {
     <div style={{ display: "flex", flexDirection: "column" }}>
       <Link to={"/theme-switcher"}>Theme Switcher</Link>
       <Link to={"/modal"}>Modal</Link>
+      <Link to={"/tooltip"}>Tooltip</Link>
     </div>
   );
 }
