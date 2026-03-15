@@ -45,3 +45,36 @@ export const useDebounce = (func, delay) => {
     }, delay);
   };
 };
+
+export const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(window.matchMedia(query).matches);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+
+    console.log("media", media);
+    const listener = () => {
+      setMatches(media.matches);
+    };
+
+    media.addEventListener("change", listener);
+
+    () => media.removeEventListener("change");
+  }, [query]);
+
+  return matches;
+};
+
+export const usePrevious = (value) => {
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current = value;
+  });
+
+  return ref.current;
+};
+
+export const useClickOutside = () => {
+  return {};
+};
