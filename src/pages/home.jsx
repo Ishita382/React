@@ -55,6 +55,9 @@ export default function Home() {
       <Link to={"/modal"}>Modal</Link>
       <Link to={"/tooltip"}>Tooltip</Link>
       <Link to={"/rating"}>Rating</Link>
+      <Link to={"/hoc"}>HOC</Link>
+      <Link to={"/split-pane"}>Resizable Split Pane</Link>
+      <Link to={"/otp-input"}>Otp Input</Link>
       <div onClick={() => handleSetValue("Arora")}>Set</div>
       <input onChange={debouncedSearch} />
       Current: {count}

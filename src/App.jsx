@@ -7,6 +7,9 @@ import MyComponent from "./pages/modal";
 import MyTooltip from "./pages/tooltip";
 import Rating from "./pages/rating";
 import AuthGuard from "./pages/auth-guard";
+import HOC from "./pages/hoc";
+import ResisableSplitPane from "./pages/split-pane";
+import OtpInput from "./pages/otp-input";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
       <Route path="/modal" element={<MyComponent />} />
       <Route path="/tooltip" element={<MyTooltip />} />
       <Route path="/rating" element={<Rating />} />
+      <Route path="/hoc" element={<HOC />} />
+      <Route path="/split-pane" element={<ResisableSplitPane />} />
+      <Route path="/otp-input" element={<OtpInput />} />
     </Routes>
   );
 }
