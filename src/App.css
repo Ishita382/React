@@ -59,3 +59,11 @@
   position: relative;
   display: inline-block;
 }
+
+.heyDiv {
+  border: 1px solid black;
+}
+
+.heyDiv:focus {
+  border-color: blue;
+}

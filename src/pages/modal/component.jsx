@@ -5,11 +5,16 @@ export default function Modal({ children, onClose }) {
   const modalRoot = document.getElementById("modal-root");
 
   return createPortal(
-    <div className="modalOverlay" onClick={onClose}>
+    <div
+      className="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      onClick={onClose}
+    >
       <div className="modalContainer" onClick={(e) => e.stopPropagation()}>
         {children}
       </div>
     </div>,
-    modalRoot
+    modalRoot,
   );
 }

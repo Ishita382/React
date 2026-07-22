@@ -7,14 +7,23 @@ import ThemeProvider from "./pages/theme-switcher/theme-provider.jsx";
 import { Provider } from "react-redux";
 import { store } from "./store.js";
 
-createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <ThemeProvider>
-        <StrictMode>
+async function enableMocking() {
+  const { worker } = await import("./mocks/browser");
+  await worker.start({
+    onUnhandledRequest: "warn",
+  });
+}
+
+enableMocking().then(() => {
+  createRoot(document.getElementById("root")).render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <ThemeProvider>
+          {/* <StrictMode> */}
           <App />
-        </StrictMode>
-      </ThemeProvider>
-    </BrowserRouter>
-  </Provider>
-);
+          {/* </StrictMode> */}
+        </ThemeProvider>
+      </BrowserRouter>
+    </Provider>,
+  );
+});
