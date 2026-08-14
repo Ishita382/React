@@ -29,6 +29,7 @@ function App() {
       <Route path="/hoc" element={<HOC />} />
       <Route path="/split-pane" element={<ResisableSplitPane />} />
       <Route path="/otp-input" element={<OtpInput />} />
+      <Route path="/otp-input" element={<OtpInput />} />
     </Routes>
   );
 }
